@@ -8,18 +8,7 @@ from image_br import image_seg
 from successMessage import Message
 
 username_store="uda"
-'''
-def thankingGUI():
-    thank=Tk()
-    thank.geometry("500x400")
-    thank.title("Thanks")
-    image=Image.open("login.jpeg")
-    photo=ImageTk.PhotoImage(image)
-    #photo.resize()
-    #Label(thank,text="hi").pack()  
-    Label(thank,image=photo).pack()
-    #thank.mainloop()    
-'''
+
 def Authentication_failed():
     #auth_screen=Tk()
     auth_screen=Toplevel(screen)
@@ -61,7 +50,7 @@ def Gesture_verification_gui():
 
 def imagesegmentation():
     #print("hi")
-    image="/home/udaram/PythonGUI/login/imagesegImg/"+username_store+".jpeg"
+    image="imagesegImg/"+username_store+".jpeg"
     print(image)
     ff=image_seg(image)
     if(ff is False):
@@ -183,7 +172,7 @@ def main_screen():
     global screen
     screen=Tk()
     screen.geometry("500x400")
-    image=Image.open("login.jpeg")
+    image=Image.open("./login.jpeg")
     photo=ImageTk.PhotoImage(image)
     #photo.resize()
     Label(image=photo).pack()
